@@ -1,0 +1,40 @@
+QUICKSORT ALGORITHM
+ this sorting algorithm uses the idea of divide and conquer.
+it finds the pivot element which divide the array into two halves in 
+such a way that elements on the right are greater than the pivot and element of the
+left are smaller than the pivot.
+recursively perfom these steps 
+1. bring the pivot into its approapriate position such 
+that the left of the pivot is smaller and the right is greater.
+2. quick sort the left part 
+3. Quick sort the right part.
+
+ALGORITHM
+int partition (int arr[], int low,int high)
+{ 
+	int pivot = arr[high];
+	int i = (low-1);
+		
+	for (int j=low; j <= high - 1; j++){
+
+		if (arr[j] <= pivot){
+		 i++
+		swapp(&arr[i], &arr[j]);
+		}
+	}
+ 	swap (&arr[i + 1];&arr[high]);
+ 	return (i + 1)
+		void quicksort (int arr[], int low, int high)
+	{ 
+		if (low < high)
+	{ 
+	    int pi = partition(arr,low,high)
+		quickSort(arr, low, pi - 1)
+		quickSort(arr,pi +1, high)
+
+time complexity best case = C(n) = 1
+			when the array is already sort or when the key element the pivot is in the appropriate 
+ 			place.
+			
+                worst case = C(n) = n
+				when the key element is at the last position or at the nth position of the array.
